@@ -1,0 +1,28 @@
+version: '3.0'
+services:
+  odoo-webapp-service:
+    depends_on:
+      - odoo-db-service
+    image: odoo13:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+        - odoo_webapp_vol:/opt/odoo13
+        - /etc/odoo13:/etc/odoo13
+        - /var/log/odoo13/odoo.log:/var/log/odoo13/odoo.log
+    ports:
+      - 8085:8069
+  odoo-db-service:
+    image: postgres:10
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_DB=postgres
+    volumes:
+      - doo_db_vol:/var/lib/postgresql/data
+volumes:
+  doo_db_vol:
+  odoo_webapp_vol:

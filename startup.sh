@@ -1,0 +1,1 @@
+./odoo-bin -c /opt/odoo13/debian/odoo.conf
