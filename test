@@ -1,0 +1,18 @@
+apt install postgresql-client
+    2  echo "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main" >> /etc/apt/sources.list.d/pgdg.list
+    3  cat  /etc/apt/sources.list.d/pgdg.list
+    4  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    5  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+    6  sudo apt install gnupg
+    7  apt install gnupg
+    8  apt update
+    9  apt install gnupg
+   10  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+   11  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+   12  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add
+   13  gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}"
+   14  repokey='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8' 
+   15  gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}"
+   16  sudo apt install postgresql-client
+   17  apt install postgresql-client
+   18  history
